@@ -57,7 +57,7 @@ def parse_txt_file(file_path):
         
         # Process Classplus URLs through API
         if is_video and 'classplus' in url.lower():
-            url = f"https://engineers-babu.onrender.com/?url={urllib.parse.quote(url)}"
+            url = f"https://engineers-babu-player-0ppl.onrender.com/?url={urllib.parse.quote(url)}"
         
         # Initialize subject if not exists
         if subject_name not in subjects_dict:
