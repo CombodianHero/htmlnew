@@ -1,9 +1,6 @@
 services:
   - type: web
-    name: engineers-babu-bot
+    name: telegram-bot
     env: python
     buildCommand: pip install -r requirements.txt
     startCommand: python telegram_bot.py
-    envVars:
-      - key: BOT_TOKEN
-        sync: false
