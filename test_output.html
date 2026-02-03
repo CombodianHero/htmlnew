@@ -373,7 +373,8 @@ body {
     <button class="pdf-close-btn" onclick="closePdfModal()">✕ Close</button>
   </div>
   <div class="pdf-modal-content">
-    <iframe class="pdf-modal-iframe" id="pdfModalViewer"></iframe>
+    <a href="https://site.com/file.pdf" target="_blank">
+  Open PDF</a>
   </div>
 </div>
 
@@ -596,6 +597,12 @@ setTimeout(() => {
     firstFolder.click();
   }
 }, 500);
+  <script>
+function openPdf(pdfUrl) {
+  window.open(pdfUrl, "_blank");
+}
+</script>
+
 </script>
 
 </body>
