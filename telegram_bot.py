@@ -768,3 +768,24 @@ def main():
 
 if __name__ == "__main__":
     main()
+import os
+import threading
+from fastapi import FastAPI
+import uvicorn
+
+PORT = int(os.environ.get("PORT", 10000))
+
+app = FastAPI()
+
+@app.get("/")
+def health():
+    return {"status": "ok"}
+
+def run_bot():
+    # YOUR existing telegram bot code
+    # application.run_polling()
+    pass
+
+if __name__ == "__main__":
+    threading.Thread(target=run_bot, daemon=True).start()
+    uvicorn.run(app, host="0.0.0.0", port=PORT)
